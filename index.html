@@ -238,6 +238,7 @@ input,select,button{
 
 img{
     max-width:100%;
+	
 }
 :focus{
      outline: none;
@@ -305,11 +306,12 @@ button:hover{
       background: grey;
 }
 
-
-@media(max-width: 500px){
-      inner{
-      display: block;
+@media screen and (max-width: 768px) {
+    .inner {
+        flex-direction: column;
+    }
 }
+
 .inner .image-holder{
        width: 100%
 }
@@ -322,15 +324,6 @@ button{
 }
 }
 
-
-footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0,0,0,0.75);
-  color: white;
-  text-align: center;
-}
 
 
 </style>
@@ -454,8 +447,8 @@ window.addEventListener("scroll", reveal, {passive: true});
 </div>
 
 <footer>
-All Rights Reserved
-</footer>
 
+</footer>
+<p style="background-color: rgba(0,0,0,0.75);  width: 100%; color: white; text-align: center;">All Rights Reserved</p>
 
 </html>
