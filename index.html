@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Prakarti</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+  
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+.responsive {
+  width: 100%;
+  max-width: 500%;
+  height: auto;
+}
+
+body, html {
+    height: 100%;
+}
+.hero-image {
+  background-image: url("water.jpg");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@keyframes example {
+  0%   {background-color:; bottom:100px; top:100px;}
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  animation-name: example;
+  animation-duration: 4s;
+   
+}
+
+.container{
+    max-width: 1200px;
+	margin: auto;
+	overflow: auto;
+	}
+.gallery{
+   margin: 5px;
+   border: 1px solid #ccc;
+   float: left;
+   width: 390px;
+}
+.gallery img{
+   width: 100%;
+   height:auto;
+}
+
+.desc{
+   padding: 15px;
+   text-align: center;
+   color: green;
+}
+
+
+/* Container needed to position the overlay. Adjust the width as needed */
+
+
+/* Make the image to responsive */
+.image {
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.75);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
+}
+
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.image-holder:hover .overlay {
+  transform: scale(1.0);
+  transition: transform 0.5s;
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bg-img{
+  background-image: url('IMG20210527044110.jpg');
+   background-repeat: no-repeat;
+     background-attachment: fixed;
+  background-size: 100% 100%;
+
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+ .parallax {
+            background-image: url('IMG20210527044110.jpg');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+@
+*{
+   box-sizing: border-box;
+}
+input,select,button{
+   font-family: arial;
+    color: grey;
+    font-size: 14px;
+
+}
+
+img{
+    max-width:100%;
+}
+:focus{
+     outline: none;
+}
+.wrapper{
+    min-height: 100vh;
+    background-size: cover;
+     background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+       justify-content: center;
+}
+.inner{
+     padding:20px;
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+}
+.inner .image-holder{
+     width: 50%;
+}
+.inner form{
+    width: 50%;
+     padding-top: 36px;
+     padding-left: 45px;
+     padding-right: 45px;
+}
+
+.form-group{
+     display: flex;
+}
+.form-group input{
+     width: 50%;
+}
+.form-wrapper{
+     position: realtive;
+}
+.form-control{
+    border: 1px solid black;
+     border: none;
+     border-bottom: 1px solid black;
+      display: block;
+      width: 100%;
+       height: 30px;
+        padding-right: 0;
+        margin-bottom: 25px;
+
+}
+button{
+    border: none;
+     width: 164px;
+     height: 51px;
+     margin: auto;
+     margin-top: 20px;
+     cursor: pointer;
+     display: flex;
+      align-items: center;
+      justify-content: center;
+        padding-left: 0;
+       background: black;
+        font-size: 15px;
+         color: #fff;
+}
+button:hover{
+      background: grey;
+}
+
+
+@media(max-width: 765px){
+      inner{
+      display: block;
+}
+.inner .image-holder{
+       width: 100%
+}
+.inner form{
+        width: 100%;
+        padding: 40px 0 30px;
+}
+button{
+        margin-top: 60px;
+}
+}
+
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+<div class="header">
+  <a href="#default" class="logo"><b style="font-family:cursive;"><font size="15" color="green">Prakarti</a></b></font>
+  <div class="header-right">
+    <a class="active" href="index.html">Home</a>
+    <a href="gallery.html">gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+ <div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:300%;">Discover the Natural Beauty</h1>
+    <p  style="font-family:cursive">Immerse yourself in Nature's Wonders</p>
+    
+ </div>
+</div>
+
+
+<div style="padding-left: 2rem; padding-top: 3rem">
+<h1 style="font-size:50px; color:green;"> LandScapes</h1>
+</div>
+
+<div class="container">   
+ <div class="gallery">
+   <div class="image-holder" Style="position: relative" width="50%">
+  <img src="IMG20210623052003.jpg"> 
+  <div class="overlay">
+    <div class="text">A Canal Calm</div>
+  </div>
+</div>
+   <div class="desc"> The canal flowed quietly, its clear waters reflecting the sunlight. Trees lined its banks, their leaves rustling softly in the breeze. Wildflowers added splashes of color, brightening the green landscape. The scene felt peaceful and inviting, a perfect spot to pause and enjoy nature. Let nature's beauty soothe our soul. </div>
+   </div>
+   
+   <div class="gallery">
+     <div class="image-holder" Style="position: relative" width="50%">
+  <img src="IMG20220826084227.jpg">
+  <div class="overlay">
+    <div class="text"> A verdant Haven</div>
+  </div>
+</div>
+   <div class="desc"> The green landscape stretched out before me, a serene tapestry of nature's artistry. Lush fields, dotted with towering trees, shimmered in the sunlight. The air was filled with the sweet scent of wildflowers and the gentle rustle of leaves. It was a moment of pure tranquility, a haven of peace amidst the chaos of the world.  </div>
+   </div>
+   
+   <div class="gallery">
+  <div class="image-holder" Style="position: relative" width="50%">
+  <img src="IMG20210612183444.jpg">
+  <div class="overlay">
+    <div class="text">Stormy Sky</div>
+  </div>
+</div>
+   <div class="desc"> The trees loom tall against a backdrop of darkening clouds, creating a dramatic scene. There's a sense of calm and anticipation, as if the trees are waiting for the rain to come, ready to drink in the refreshing drops. The image captures a quiet beauty, evoking feelings of stillness and the promise of a new beginning. </div>
+   
+</div>
+</div>
+
+<div style="padding-left: 2rem; padding-top: 3rem">
+<p style="font-size:50px; color:green;"> About Prakarti </p>
+<p  style="font-size:20px; color:green;"> Our Vision </p>
+</div>
+
+ <div class="container reveal">
+<div class="row">
+  <div class="column">
+        <p style="color:green;">At Prakarti, our vision is to inspire a deeper appreciation for the beauty of nature and landscapes. We aim to showcase the breathtaking diversity of our planet through stunning imagery, encouraging our audience to connect with the environment. By sharing these visual experiences, we hope to foster a sense of responsibility towards preserving our natural world for future generations. Our curated collection of photographs and stories highlights the intricate details of ecosystems, the majesty of mountains, and the tranquility of serene waters. Each image serves as a reminder of the delicate balance that sustains life on Earth.
+</p>
+  </div>
+  <div class="column">
+    <p style="color:green;">We believe that by immersing ourselves in the wonders of nature, we can cultivate a greater understanding of our role in protecting it. Join us on this journey to celebrate and protect the wonders of nature, and let’s work together to ensure that these breathtaking landscapes endure for years to come.
+</p>
+  </div>
+</div> 
+</div>
+<script>
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal, {passive: true});
+</script>
+
+
+<div class="parallax"></div>
+    <div style="height: 100px;">
+    </div>
+ 
+ 
+ <div class="wrapper">
+ <div class="inner">
+ <div class="image-holder">
+ <img src="birds.jpg" alt="image">
+</div>
+
+<form>
+<h2 style="font-size:30px; color:green"> Stay Connected with Prakarti </h2>
+<div class="form-group">
+<input type="text" placeholder="Name" class="">
+</div>
+<div class="form-wrapper">
+<input type="text" placeholder="Enter Your Email" class="">
+</div>
+<button> Subscribe </button>
+</form> 
+</div>
+</div>
+
+<footer>
+All Rights Reserved
+</footer>
+
+
+</html>
